@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRAKASH RAJ - Graphic Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#FF4D4D", secondary: "#333333" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+      }
+      .project-card:hover{
+      opacity: 1;
+      }
+      .skill-bar {
+      height: 4px;
+      background-color: #e5e7eb;
+      border-radius: 2px;
+      overflow: hidden;
+      }
+      .skill-progress {
+      height: 100%;
+      border-radius: 2px;
+      }
+      .tool-item:hover .tool-name {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      input:focus, textarea:focus {
+      outline: none;
+      border-color: #FF4D4D;
+      }
+      .form-input:focus + .form-label,
+      .form-input:not(:placeholder-shown) + .form-label {
+      transform: translateY(-24px) scale(0.75);
+      color: #FF4D4D;
+      }
+      .category-filter.active {
+      background-color: #FF4D4D;
+      color: white;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background: #FF4D4D;
+      border-radius: 50%;
+      cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header Section -->
+    <header class="relative h-screen flex items-center overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10"
+      ></div>
+      <div
+        style="background-image: url('https://readdy.ai/api/search-image?query=minimalist%20modern%20design%20studio%20with%20clean%20lines%2C%20professional%20workspace%20with%20design%20tools%2C%20artistic%20environment%2C%20high%20contrast%20black%20and%20white%20aesthetic%20with%20subtle%20red%20accent%2C%20professional%20photography%2C%20ultra%20high%20quality%2C%20cinematic%20lighting&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+        class="absolute inset-0"
+      ></div>
+      <div class="container mx-auto px-6 relative z-20">
+        <nav
+          class="absolute top-0 left-0 w-full py-6 flex justify-between items-center"
+        >
+          <a href="index.html" class="inline-block transition-transform hover:scale-105">
+  <img src="Images/Prakash Logo.png" alt="Prakash Raj Logo" class="h-16">
+</a>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+              >Skills</a
+            >
+            <a
+              href="#tools"
+              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+              >Tools</a
+            >
+            <a
+              href="#portfolio"
+              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden w-10 h-10 flex items-center justify-center">
+            <i class="ri-menu-line text-white ri-2x"></i>
+          </div>
+        </nav>
+        <div class="min-h-[90vh] flex items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="h-[2px] w-8 bg-primary"></div>
+                <span class="text-white/80 text-sm uppercase tracking-widest"
+                  >Welcome to my portfolio</span
+                >
+              </div>
+              <h1
+                class="text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              >
+                PRAKASH <span class="text-primary">RAJ</span>
+              </h1>
+              <p class="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
+                Creative UI/UX & Graphic Designer crafting visual stories
+                that connect and inspire. With 8+ years of experience
+                transforming ideas into impactful designs.
+              </p>
+              <div class="flex flex-wrap gap-6 items-center">
+                <a
+                  href="#portfolio"
+                  class="group px-8 py-4 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-all duration-300 flex items-center gap-2"
+                >
+                  View Portfolio
+                  <i
+                    class="ri-arrow-right-line transition-transform group-hover:translate-x-1"
+                  ></i>
+                </a>
+                <a
+                  href="#contact"
+                  class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-medium !rounded-button hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
+                >
+                  Get in Touch
+                  <i
+                    class="ri-arrow-right-line transition-transform group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </div>
+              <div class="mt-12 flex items-center gap-8">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full"
+                  >
+                    <i class="ri-award-line text-primary ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium">7+ Years</h4>
+                    <p class="text-white/60 text-sm">Experience</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full"
+                  >
+                    <i class="ri-customer-service-line text-primary ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium">200+ Projects</h4>
+                    <p class="text-white/60 text-sm">Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg:block relative">
+              <div
+                class="absolute -top-20 -right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
+              ></div>
+              <div
+                class="absolute -bottom-20 -left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="md:w-2/5">
+            <div class="relative overflow-hidden rounded-lg shadow-xl">
+             <img
+  src="Images/Prakash image.jpg"
+  alt="PRAKASH RAJ"
+  class="w-full h-auto object-cover"
+/>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+              >
+                <div class="p-6">
+                  <h3 class="text-white text-2xl font-bold mb-2">
+                    PRAKASH RAJ
+                  </h3>
+                  <p class="text-white/80">
+                    Creative UI/UX & Graphic Designer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-3/5">
+            <h2 class="text-4xl font-bold mb-6">About Me</h2>
+            <div class="h-1 w-16 bg-primary mb-8"></div>
+            <p class="text-lg text-gray-700 mb-6">
+              With over 8+ years of experience in the design industry, I've
+              developed a passion for creating visually compelling solutions
+              that solve real business problems. My approach combines strategic
+              thinking with creative execution to deliver designs that not only
+              look beautiful but also drive results.
+            </p>
+            <p class="text-lg text-gray-700 mb-8">
+              I specialize in catalog design, poster creation, brochure layouts,
+              certificate design, video editing, UI/UX design, and 3D modeling.
+              My diverse skill set allows me to tackle projects from multiple
+              angles, ensuring a comprehensive and innovative final product.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-book-open-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Catalog Design</h3>
+                <p class="text-gray-600">Creating engaging product showcases</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-artboard-2-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Poster Design</h3>
+                <p class="text-gray-600">Eye-catching visual communication</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-layout-4-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Brochure Design</h3>
+                <p class="text-gray-600">Informative and elegant layouts</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-award-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Certificate Design</h3>
+                <p class="text-gray-600">Professional recognition documents</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-movie-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Video Editing</h3>
+                <p class="text-gray-600">Dynamic visual storytelling</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
+                >
+                  <i class="ri-layout-masonry-line ri-lg"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                <p class="text-gray-600">User-centered digital experiences</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-primary text-white font-medium !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >Hire Me</a
+              >
+              <a
+  href="assets/Prakash_Graphic Designer-2025.pdf"
+  download
+  class="px-8 py-3 bg-gray-100 text-gray-800 font-medium !rounded-button hover:bg-gray-200 transition-colors whitespace-nowrap"
+>
+  Download CV
+</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">My Skills</h2>
+          <div class="h-1 w-16 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            I've honed my expertise across various design disciplines, allowing
+            me to approach projects with versatility and depth.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Graphic Design</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">UI/UX Design</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Branding</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Typography</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 92%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Print Design</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">3D Modeling</span>
+                <span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 40%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Video Editing</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Motion Graphics</span>
+                <span>78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 78%"></div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Photography</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Illustration</span>
+                <span>82%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress bg-primary" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tools Section -->
+    <section id="tools" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Tools & Software</h2>
+          <div class="h-1 w-16 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            I leverage industry-standard tools and software to bring creative
+            concepts to life with precision and efficiency.
+          </p>
+        </div>
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3"
+            >
+              <i class="ri-paint-brush-line"></i>
+            </div>
+            2D Design Tools
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+          <div class="tool-item group relative flex flex-col items-center">
+  <!-- Icon replaced with image -->
+  <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3">
+    <img src="Images/photoshop.png" alt="Photoshop" class="w-11 h-11" />
+  </div>
+  <span class="text-sm font-medium">Photoshop</span>
+
+  <!-- Tooltip -->
+  <div
+    class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+  >
+    Advanced
+  </div>
+</div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/illustrator.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Illustrator</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Advanced
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/indesign.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">InDesign</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Advanced
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/photoshop-lightroom.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Lightroom</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Intermediate
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/acrobat.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Acrobat</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Intermediate
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3"
+            >
+              <i class="ri-layout-masonry-line"></i>
+            </div>
+            UI/UX Design Tools
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/figma.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Figma</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Advanced
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/xd.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Adobe XD</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Advanced
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/sketch.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Sketch</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Intermediate
+              </div>
+            </div>
+                        <div class="tool-item group relative flex flex-col items-center">
+              
+                          </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-8 flex items-center">
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-3"
+            >
+              <i class="ri-cube-line"></i>
+            </div>
+            3D & Video Editing Tools
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <i class="ri-blender-line ri-2x text-orange-500"></i>
+              </div>
+              <span class="text-sm font-medium">Blender</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Advanced
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/premiere-pro.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Premiere Pro</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Intermediate
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/after-effects.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">After Effect</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Basic
+              </div>
+            </div>
+            <div class="tool-item group relative flex flex-col items-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-3"
+              >
+                <img src="Images/Filmora.png" alt="Photoshop" class="w-11 h-11" />
+              </div>
+              <span class="text-sm font-medium">Filmora</span>
+              <div
+                class="tool-name opacity-0 transform translate-y-2 transition-all duration-200 absolute -top-8 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+              >
+                Intermediate
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">My Portfolio</h2>
+<div class="h-1 w-16 bg-primary mx-auto mb-6"></div>
+<p class="text-lg text-gray-700 max-w-3xl mx-auto">Browse through a selection of my most recent and impactful projects across various design disciplines.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="category-filter active px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="catalog">Catalogs</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="poster">Posters</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="brochure">Brochures</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="ui-ux">UI/UX</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="3d">3D Design</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="animation">Animation</button>
+<button class="category-filter px-4 py-2 bg-gray-200 text-gray-800 !rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap" data-filter="all">All Projects</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/future.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Cinematic.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Cinematic.mp4">
+          </a>
+  </div>
+</div>
+  <div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/airplane.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Airplane Final out_1 (1).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Airplane Final out_1 (1).mp4">
+          </a>
+  </div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/boat thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Sea with boat Animation 1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Sea with boat Animation 1.mp4">
+          </a>
+  </div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/car thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Car Animation Final 2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Car Animation Final 2.mp4">
+          </a>
+  </div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/thum1.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Interior-Animation-in-Blender.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Interior-Animation-in-Blender.mp4">
+          </a>
+  </div>
+</div>
+
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="animation">
+  <!-- Video with poster (thumbnail) -->
+  <video
+    class="w-full h-64 object-cover pointer-events-none"
+    muted
+    playsinline
+    preload="none"
+    poster="Images/thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
+  >
+    <source src="Video/Helicopter.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="absolute inset-0 bg-black/60 opacity-0 duration-300 flex flex-col justify-center items-center p-6">
+        <a href="Video/Helicopter.mp4">
+          </a>
+  </div>
+</div>
+
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+  <img src="Images/catalog-2.jpg" 
+       alt="Luxury Fashion Catalog" 
+       class="w-full h-64 object-cover">
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster-1.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster2.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster3.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster5.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster4.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="poster">
+<img src="Images/poster6.png" alt="Music Festival Poster" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure6.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure1.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure2.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure3.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure4.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="brochure">
+<img src="Images/brochure5.png" alt="Corporate Brochure" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui1.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui2.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui3.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui4.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui5.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="ui-ux">
+<img src="Images/ui6.png" alt="Fitness App UI" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="Images/3d1.png" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="Images/3d2.png" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="Images/3d3.png" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="Images/3d4.png" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="Images/3d5.png" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="3d">
+<img src="https://readdy.ai/api/search-image?query=3D%20product%20visualization%20for%20modern%20furniture%2C%20photorealistic%20rendering%20of%20minimalist%20chair%20design%2C%20studio%20lighting%20setup%20with%20clean%20background%2C%20professional%203D%20modeling%20and%20texturing%2C%20architectural%20visualization%20quality&width=800&height=600&seq=7&orientation=landscape" alt="3D Furniture Visualization" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+<img src="Images/Cat-5.png" alt="Gourmet Food Catalog" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+<img src="https://readdy.ai/api/search-image?query=product%20catalog%20design%20for%20gourmet%20food%20company%2C%20elegant%20layout%20showcasing%20artisanal%20food%20products%2C%20professional%20food%20photography%20with%20clean%20white%20background%2C%20sophisticated%20typography%20and%20minimal%20design%20elements%2C%20high-end%20print%20design&width=800&height=600&seq=8&orientation=landscape" alt="Gourmet Food Catalog" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+<img src="Images/catalog-4.png" alt="Gourmet Food Catalog" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+<img src="Images/cate3.png" alt="Gourmet Food Catalog" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+<div class="project-card relative overflow-hidden rounded-lg shadow-md group transform-gpu transition-transform duration-500 hover:scale-105 hover:rotate-1" data-category="catalog">
+<img src="Images/cat-.png" alt="Gourmet Food Catalog" class="w-full h-64 object-cover">
+<div class=" absolute inset-0 bg-black/70 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Project Detail Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold">Project Details</h3>
+<button id="closeModal" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div id="modalContent">
+<!-- Content will be dynamically inserted here -->
+</div>
+</div>
+</div>
+</div>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Client Testimonials</h2>
+          <div class="h-1 w-16 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            What my clients have to say about working together on their design
+            projects.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "PRAKASH completely transformed our brand identity with a stunning
+              catalog design that perfectly captured our company's essence. The
+              attention to detail and creative vision exceeded our
+              expectations."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+              <div>
+                <h4 class="font-semibold">Emily Richardson</h4>
+                <p class="text-sm text-gray-600">
+                  Marketing Director, Luxe Fashion
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "Working with PRAKASH RAJ on our app UI redesign was a game-changer. The
+              intuitive interface design increased our user engagement by 40%
+              within the first month of launch. Highly recommended!"
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+              <div>
+                <h4 class="font-semibold">Michael Chen</h4>
+                <p class="text-sm text-gray-600">Product Manager, FitTrack</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm">
+            <div class="flex items-center mb-6">
+              <div class="text-primary">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6">
+              "The 3D product visualizations created for our furniture line
+              were absolutely stunning. The photorealistic quality helped us
+              secure major retail partnerships before production even began."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+              <div>
+                <h4 class="font-semibold">Sophia Martinez</h4>
+                <p class="text-sm text-gray-600">
+                  Creative Director, Modern Home
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Our Happy Clients
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Trusted by leading brands and happy clients across industries.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 reveal">
+      
+      <!-- Logo Example -->
+      <div class="client-logo group">
+        <div
+          class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md"
+        >
+          <img
+            src="/Images/SRM.png"
+            alt="srm"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/vivo.png"
+            alt="vivo"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/poorvika.jpg"
+            alt="Poorvika"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/Sangeetha.png"
+            alt="Sangeetha"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/realme.png"
+            alt="Realme"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/PMA.png"
+            alt="PMA"
+            class="max-h-18 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/SLIIT_Northern UNI LOGO.png"
+            alt="Northanuni"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+
+      <div class="client-logo group">
+        <div class="bg-gray-50 rounded-lg p-6 h-24 flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:shadow-md">
+          <img
+            src="/Images/MagickGroup.png"
+            alt="group"
+            class="max-h-10 object-contain grayscale group-hover:grayscale-0 transition"
+          />
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Get In Touch
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have a project in mind? Let's discuss how we can work together to
+            bring your vision to life.
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12 reveal">
+          <div class="w-full lg:w-1/2">
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary"
+                  placeholder="What is this regarding?"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded resize-none focus:border-primary"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-blue-600 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="bg-gray-50 p-8 rounded-lg h-full">
+              <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center mr-4 bg-red-100 rounded-full text-primary"
+                  >
+                    <i class="ri-map-pin-fill ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Location</p>
+                    <p class="text-gray-600">Chennai, Tamil Nadu, India</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center mr-4 bg-red-100 rounded-full text-primary"
+                  >
+                    <i class="ri-mail-fill ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Email</p>
+                    <a
+                      href="mailto:contact@example.com"
+                      class="text-gray-600 hover:text-primary"
+                      >contact@example.com</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center mr-4 bg-red-100 rounded-full text-primary"
+                  >
+                    <i class="ri-phone-fill ri-lg"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Phone</p>
+                    <a
+                      href="tel:+919876543210"
+                      class="text-gray-600 hover:text-primary"
+                      >+91 8973287421</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <p class="font-medium mb-4">Connect with me</p>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="social-icon w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600"
+                  >
+                    <i class="ri-linkedin-fill ri-lg"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-icon w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600"
+                  >
+                    <i class="ri-behance-fill ri-lg"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-icon w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600"
+                  >
+                    <i class="ri-instagram-fill ri-lg"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social-icon w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600"
+                  >
+                    <i class="ri-dribbble-fill ri-lg"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mt-8">
+  <h4 class="font-semibold mb-4">Find Me on Map</h4>
+  <div class="w-full h-64 rounded overflow-hidden border border-gray-200 shadow-sm">
+    <iframe
+      width="100%"
+      height="100%"
+      frameborder="0"
+      style="border:0"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.521119551706!2d80.05870321488263!3d12.694580321415899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f68c5e75f8c9%3A0x5065021aa4c7e7bb!2sChengalpattu%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1593414467874!5m2!1sen!2sin"
+    ></iframe>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="index.html">
+  <img src="Images/Prakash Logo.png" alt="Prakash Raj Logo" class="h-10 mb-2">
+</a>
+            <p class="text-gray-400">Crafting visual experiences since 2017</p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#tools"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Tools</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+          <div>
+  <a
+    href="assets/Prakash_Graphic Designer-2025.pdf"
+    download
+    class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+  >
+    Download CV
+  </a>
+</div>
+        </div>
+        <hr class="border-gray-800 my-8" />
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 PRAKASH RAJ. All rights reserved.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-behance-line"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-dribbble-line"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-linkedin-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300"
+    >
+      <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    <script id="navigationScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("backToTop");
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove("opacity-0", "invisible");
+            backToTopButton.classList.add("opacity-100", "visible");
+          } else {
+            backToTopButton.classList.remove("opacity-100", "visible");
+            backToTopButton.classList.add("opacity-0", "invisible");
+          }
+        });
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script id="portfolioFilterScript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".category-filter");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    // Detect the initially active filter button on load
+    const activeButton = document.querySelector(".category-filter.active");
+    const initialFilter = activeButton ? activeButton.getAttribute("data-filter") : "all";
+
+    // Show only the matching category cards on page load
+    projectCards.forEach((card) => {
+      if (initialFilter === "all" || card.getAttribute("data-category") === initialFilter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Add click event to each filter button
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Remove active class from all buttons
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        // Add active class to clicked button
+        this.classList.add("active");
+
+        const filter = this.getAttribute("data-filter");
+
+        // Show/hide cards based on selected filter
+        projectCards.forEach((card) => {
+          if (filter === "all" || card.getAttribute("data-category") === filter) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+<script>
+        // Project modal functionality
+        const projectModal = document.getElementById("projectModal");
+        const closeModal = document.getElementById("closeModal");
+        const modalContent = document.getElementById("modalContent");
+        // Close modal when clicking the close button
+        closeModal.addEventListener("click", function () {
+          projectModal.classList.add("hidden");
+        });
+        // Close modal when clicking outside the modal content
+        projectModal.addEventListener("click", function (e) {
+          if (e.target === projectModal) {
+            projectModal.classList.add("hidden");
+          }
+        });
+        // Prevent modal from closing when clicking inside the modal content
+        modalContent.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+        // Open modal when clicking on a project
+        document.querySelectorAll(".project-card a").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const projectCard = this.closest(".project-card");
+            const projectTitle = projectCard.querySelector("h3").textContent;
+            const projectDescription = projectCard.querySelector("p").textContent;
+            const projectImage = projectCard.querySelector("img").src;
+            // Populate modal content
+            modalContent.innerHTML = `
+      <img src="${projectImage}" alt="${projectTitle}" class="w-full h-64 object-cover rounded-lg mb-6">
+      <h3 class="text-2xl font-bold mb-4">${projectTitle}</h3>
+      <p class="text-gray-700 mb-6">${projectDescription}</p>
+      <div class="mb-6">
+      <h4 class="font-semibold mb-2">Project Details</h4>
+      <ul class="space-y-2 text-gray-700">
+      <li><span class="font-medium">Client:</span> Creative Agency</li>
+      <li><span class="font-medium">Date:</span> June 2025</li>
+      <li><span class="font-medium">Category:</span> ${projectCard.getAttribute("data-category")}</li>
+      <li><span class="font-medium">Tools Used:</span> Adobe InDesign, Photoshop, Illustrator</li>
+      </ul>
+      </div>
+      <div>
+      <h4 class="font-semibold mb-2">Project Overview</h4>
+      <p class="text-gray-700 mb-4">This project involved creating a comprehensive design solution that aligned with the client's brand identity while pushing creative boundaries. The design process included extensive research, conceptualization, and multiple revision cycles to achieve the perfect result.</p>
+      <p class="text-gray-700">The final deliverables exceeded client expectations and helped them achieve their marketing objectives with a significant increase in customer engagement.</p>
+      </div>
+      `;
+            // Show modal
+            projectModal.classList.remove("hidden");
+          });
+        });
+    </script>
+    <script id="formHandlingScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Form input animation
+        const formInputs = document.querySelectorAll(".form-input");
+        formInputs.forEach((input) => {
+          // Set initial state for inputs with values
+          if (input.value.trim() !== "") {
+            const label = input.nextElementSibling;
+            label.classList.add("transform", "scale-75", "-translate-y-6");
+          }
+          // Handle focus and blur events
+          input.addEventListener("focus", function () {
+            const label = this.nextElementSibling;
+            label.classList.add("text-primary");
+          });
+          input.addEventListener("blur", function () {
+            const label = this.nextElementSibling;
+            label.classList.remove("text-primary");
+          });
+        });
+        // Form submission
+        const contactForm = document.querySelector("form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+          // Simple validation
+          if (
+            name.trim() === "" ||
+            email.trim() === "" ||
+            subject.trim() === "" ||
+            message.trim() === ""
+          ) {
+            alert("Please fill in all fields");
+            return;
+          }
+          // Here you would typically send the form data to a server
+          // For demo purposes, we'll just show a success message
+          alert("Thank you for your message! I will get back to you soon.");
+          // Reset form
+          contactForm.reset();
+        });
+      });
+    </script>
+    <script>
+// Target all project cards with video
+document.querySelectorAll('.project-card').forEach(card => {
+  const video = card.querySelector('video');
+
+  card.addEventListener('mouseenter', () => {
+    if (video) {
+      video.currentTime = 0;
+      video.play();
+    }
+  });
+
+  card.addEventListener('mouseleave', () => {
+    if (video) {
+      video.pause();
+      video.currentTime = 0; // Reset to beginning
+    }
+  });
+});
+</script>
+  </body>
+</html>
