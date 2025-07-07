@@ -86,56 +86,95 @@
       cursor: pointer;
       }
     </style>
+    <style>
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+</style>
   </head>
   <body class="bg-white text-gray-800">
     <!-- Header Section -->
-    <header class="relative h-screen flex items-center overflow-hidden">
+    <header class="relative min-h-screen flex flex-col justify-between overflow-hidden">
       <div
         class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10"
       ></div>
-      <div
+            <div
         style="background-image: url('https://readdy.ai/api/search-image?query=minimalist%20modern%20design%20studio%20with%20clean%20lines%2C%20professional%20workspace%20with%20design%20tools%2C%20artistic%20environment%2C%20high%20contrast%20black%20and%20white%20aesthetic%20with%20subtle%20red%20accent%2C%20professional%20photography%2C%20ultra%20high%20quality%2C%20cinematic%20lighting&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
         class="absolute inset-0"
       ></div>
       <div class="container mx-auto px-6 relative z-20">
-        <nav
-          class="absolute top-0 left-0 w-full py-6 flex justify-between items-center"
-        >
-          <a href="index.html" class="inline-block transition-transform hover:scale-105">
-  <img src="Images/Prakash Logo.png" alt="Prakash Raj Logo" class="h-16">
-</a>
-          <div class="hidden md:flex space-x-8">
-            <a
-              href="#about"
-              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >About</a
-            >
-            <a
-              href="#skills"
-              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >Skills</a
-            >
-            <a
-              href="#tools"
-              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >Tools</a
-            >
-            <a
-              href="#portfolio"
-              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >Portfolio</a
-            >
-            <a
-              href="#contact"
-              class="text-white hover:text-primary transition-colors text-sm uppercase tracking-wider font-medium"
-              >Contact</a
-            >
-          </div>
-          <div class="md:hidden w-10 h-10 flex items-center justify-center">
-            <i class="ri-menu-line text-white ri-2x"></i>
-          </div>
-        </nav>
-        <div class="min-h-[90vh] flex items-center">
+        <!-- Responsive Navigation & Header -->
+<nav class="relative w-full py-6 px-6 flex justify-between items-center z-50">
+  <a href="index.html" class="inline-block transition-transform hover:scale-105">
+    <img src="Images/Prakash Logo.png" alt="Prakash Raj Logo" class="h-14 sm:h-16">
+  </a>
+  <!-- Desktop Nav -->
+  <div class="hidden md:flex space-x-8">
+    <a href="#about" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">About</a>
+    <a href="#skills" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Skills</a>
+    <a href="#tools" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Tools</a>
+    <a href="#portfolio" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Portfolio</a>
+    <a href="#contact" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Contact</a>
+  </div>
+  <!-- Hamburger Button -->
+  <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
+    <i id="menu-icon" class="ri-menu-line transition-transform duration-300"></i>
+  </button>
+</nav>
+<!-- Mobile Navigation Menu -->
+<div id="mobileMenu" class="md:hidden hidden flex-col gap-4 px-6 py-6 bg-black/90 backdrop-blur-md rounded-b-lg shadow-lg z-40 transition-all duration-300 ease-in-out">
+  <a href="#about" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">About</a>
+  <a href="#skills" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Skills</a>
+  <a href="#tools" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Tools</a>
+  <a href="#portfolio" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Portfolio</a>
+  <a href="#contact" class="text-white hover:text-primary text-sm uppercase tracking-wider font-medium">Contact</a>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("flex");
+      if (isOpen) {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+        menuIcon.classList.replace("ri-close-line", "ri-menu-line");
+      } else {
+        mobileMenu.classList.remove("hidden");
+        mobileMenu.classList.add("flex");
+        menuIcon.classList.replace("ri-menu-line", "ri-close-line");
+      }
+    });
+  });
+</script>
+<style>
+  @media (max-width: 768px) {
+    header .grid {
+      gap: 2rem;
+      padding-top: 4rem;
+    }
+    header h1 {
+      font-size: 2.25rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+  }
+</style>
+     
+                <div class="min-h-[90vh] flex items-center">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="max-w-2xl">
               <div class="flex items-center gap-4 mb-6">
@@ -182,7 +221,7 @@
                     <i class="ri-award-line text-primary ri-lg"></i>
                   </div>
                   <div>
-                    <h4 class="text-white font-medium">7+ Years</h4>
+                    <h4 class="text-white font-medium">8+ Years</h4>
                     <p class="text-white/60 text-sm">Experience</p>
                   </div>
                 </div>
@@ -669,7 +708,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/future.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -688,7 +727,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/airplane.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -707,7 +746,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/boat thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -726,7 +765,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/car thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -745,7 +784,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/thum1.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -765,7 +804,7 @@
   <!-- Video with poster (thumbnail) -->
   <video
     class="w-full h-64 object-cover pointer-events-none"
-    muted
+    
     playsinline
     preload="none"
     poster="Images/thum.png"  <!-- ✅ Replace with your actual thumbnail image -->
@@ -1655,6 +1694,14 @@ document.querySelectorAll('.project-card').forEach(card => {
     }
   });
 });
+</script> 
+<script>
+  const menuToggle = document.querySelector(".ri-menu-line");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
 </script>
   </body>
 </html>
